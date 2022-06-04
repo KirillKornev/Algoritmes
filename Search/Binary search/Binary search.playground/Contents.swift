@@ -1,6 +1,6 @@
 import Foundation
 
-func binarySearch(_ list: [Int], item: Int) -> Bool {
+func binarySearch<T: Comparable>(_ list: [T], item: T) -> Bool {
     // Borders
     var leftIndex = 0
     var rightIndex = list.count - 1
