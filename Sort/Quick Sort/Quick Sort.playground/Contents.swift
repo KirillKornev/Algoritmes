@@ -7,7 +7,7 @@ func quickSort<T: Comparable>(_ array: [T]) -> [T] {
     var pivot = [T]()
     var greater = [T]()
     
-    let pivotItem = array[0]
+    let pivotItem = array.randomElement() ?? array[0]
     
     for item in array {
         
