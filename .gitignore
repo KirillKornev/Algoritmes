@@ -4,3 +4,8 @@ xcuserdata/
 ## Playgrounds
 timeline.xctimeline
 playground.xcworkspace
+
+# OS-specific files
+.DS_Store
+.Trashes
+Thumbs.db
