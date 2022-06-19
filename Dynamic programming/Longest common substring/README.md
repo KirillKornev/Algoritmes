@@ -6,7 +6,7 @@ Compare substrings and find common length
 ## Creating matrix:
 
 | -  | f | o | s | h |
-| ------------- | ------------- |
+| -- | -- | -- | -- | -- |
 | f  | 1  | 1  | 1  | 1  |
 | i  | 1  | 1  | 1  | 1  |
 | s  | 1  | 1  | 2  | 2  |
