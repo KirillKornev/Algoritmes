@@ -1,6 +1,7 @@
 import UIKit
 
 /*
+ task: https://leetcode.com/problems/two-sum/
  Go throught all elemets in array and compare with other all elemets
  
  for

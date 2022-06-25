@@ -1,6 +1,7 @@
 import UIKit
 
 /*
+ task: https://leetcode.com/problems/two-sum/
  Go throught all elemets in array and save indexes for value keys
  Compare each element with dict and target
  
