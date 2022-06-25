@@ -13,7 +13,6 @@ class Solution {
     
     func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
         
-        // Пробегаем по всему массиву
         for i in 0..<nums.count {
             for j in i + 1..<nums.count {
                 let firstNumber = nums[i]
