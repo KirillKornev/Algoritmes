@@ -19,23 +19,29 @@ public class ListNode {
 
 class Solution {
     func addTwoNumbers(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
-        var head: ListNode? = ListNode(0)
+        var head: ListNode? = ListNode()
         var current: ListNode? = head
 
-        var l1 = l1
-        var l2 = l2
+        var l1Node = l1
+        var l2Mode = l2
         var carry = 0
 
-        while l1 != nil || l2 != nil || carry > 0 {
-            let l1Val = l1?.val ?? 0
-            let l2Val = l2?.val ?? 0
-            let sum = l1Val + l2Val + carry
+        while l1Node != nil || l2Mode != nil || carry != 0 {
+            let l1Val = l1Node?.val ?? 0
+            let l2Val = l2Mode?.val ?? 0
 
-            carry = sum / 10
+            // find summ
+            let summ = l1Val + l2Val + carry
 
-            current?.next = ListNode(sum % 10)
-            l1 = l1?.next
-            l2 = l2?.next
+            // if value > 10, get an 1
+            carry = summ / 10
+
+            // set finded summ to next node
+            current?.next = ListNode(summ % 10)
+
+            // move to next node
+            l1Node = l1Node?.next
+            l2Mode = l2Mode?.next
             current = current?.next
         }
 
@@ -64,4 +70,3 @@ func checkResult() {
     }
 }
 checkResult()
-
