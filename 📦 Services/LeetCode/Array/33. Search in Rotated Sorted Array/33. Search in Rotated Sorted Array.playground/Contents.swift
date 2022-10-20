@@ -17,7 +17,7 @@ class Solution {
                 return middle
             }
 
-            if nums[middle] <= right {
+            if nums[middle] <= nums[right] {
                 // right half is sorted
                 if target >= nums[middle], target <= nums[right] {
                     left = middle + 1
