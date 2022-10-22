@@ -3,6 +3,7 @@ import UIKit
 // https://leetcode.com/problems/container-with-most-water/
 
 // MARK: - O(n^2) Time Limit Exceeded
+// Idea: go through all cases - result - the biggest square
 
 class Solution {
     func maxArea(_ height: [Int]) -> Int {
@@ -28,6 +29,7 @@ class Solution {
 Solution().maxArea([1,8,6,2,5,4,8,3,7])
 
 // MARK: - O(n) Success
+// Idea: 2 pointers and move it each loop - try to find the biggest square
 
 class Solution1 {
     func maxArea(_ height: [Int]) -> Int {
