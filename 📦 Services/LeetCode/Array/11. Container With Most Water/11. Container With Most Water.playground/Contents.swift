@@ -7,7 +7,7 @@ import UIKit
 class Solution {
     func maxArea(_ height: [Int]) -> Int {
 
-        var maxLength = 0
+        var maxSquare = 0
 
         for i in 0..<height.count {
             let a = height[i]
@@ -17,11 +17,11 @@ class Solution {
                 let length = (j + 1) - (i + 1)
                 let res = min(a, b) * length
 
-                maxLength = max(maxLength, res)
+                maxSquare = max(maxSquare, res)
             }
         }
 
-        return maxLength
+        return maxSquare
     }
 }
 
@@ -32,13 +32,13 @@ Solution().maxArea([1,8,6,2,5,4,8,3,7])
 class Solution1 {
     func maxArea(_ height: [Int]) -> Int {
 
-        var maxLength = 0
+        var maxSquare = 0
         var left = 0
         var right = height.count - 1
 
         while left < right {
             let value = (right - left) * min(height[left], height[right])
-            maxLength = max(maxLength, value)
+            maxSquare = max(maxSquare, value)
 
             if height[left] < height[right] {
                 left += 1
@@ -47,7 +47,7 @@ class Solution1 {
             }
         }
 
-        return maxLength
+        return maxSquare
     }
 }
 
