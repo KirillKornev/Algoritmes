@@ -32,7 +32,7 @@ class Solution2 {
             return value
         }
 
-        memo[n] = climbStairs(n - 1) //+ climbStairs(n - 2)
+        memo[n] = climbStairs(n - 1) + climbStairs(n - 2)
         return memo[n]!
     }
 }
