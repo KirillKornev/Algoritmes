@@ -41,6 +41,8 @@ Solution2().climbStairs(20)
 
 // MARK: - Dynamic
 
+// a(i) = dp[i - 1] + dp[i - 2]
+
 class Solution3 {
 
     func climbStairs(_ n: Int) -> Int {
