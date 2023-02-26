@@ -3,8 +3,9 @@ import UIKit
 // https://leetcode.com/problems/longest-common-subsequence/description/
 
 // MARK: - Dynamic
-// a(i) == b(j) -> dp[i - 1][j - 1] + 1
-// a(i) != b(j) -> max(dp[i][j - 1] + 1 or dp[i - 1][j])
+
+// a(i) == b(j) -> dp[i][j] = dp[i - 1][j - 1] + 1
+// a(i) != b(j) -> dp[i][j] = max(dp[i][j - 1] , dp[i - 1][j])
 
 class Solution {
     func longestCommonSubsequence(_ text1: String, _ text2: String) -> Int {
@@ -28,3 +29,4 @@ class Solution {
 }
 
 Solution().longestCommonSubsequence("abc", "def")
+
