@@ -38,3 +38,22 @@ class Solution2 {
 }
 
 Solution2().climbStairs(20)
+
+// MARK: - Dynamic
+
+class Solution3 {
+
+    func climbStairs(_ n: Int) -> Int {
+        if n < 2 { return 1 }
+
+        var dp = Array(0...(n + 1))
+
+        for i in 2...(n + 1) {
+            dp[i] = dp[i - 1] + dp[i - 2]
+        }
+
+        return dp[n + 1]
+    }
+}
+
+Solution3().climbStairs(3)
