@@ -1,9 +1,10 @@
 import UIKit
 
-// https://leetcode.com/problems/pascals-triangle/description/
+// https://leetcode.com/problems/pascals-triangle
+// https://leetcode.com/problems/pascals-triangle-ii/
 
 class Solution {
-    func generate(_ numRows: Int) -> [[Int]] {
+    func pascalTriangle(_ rows: Int) -> [[Int]] {
         var rowsItems: [[Int]] = []
 
         for row in 0..<rows {
@@ -24,4 +25,11 @@ class Solution {
 
         return rowsItems
     }
+
+    func getRow(_ rowIndex: Int) -> [Int] {
+        let triangle = pascalTriangle(rowIndex + 1)
+        return triangle[rowIndex]
+    }
 }
+
+Solution().getRow(3)
