@@ -6,8 +6,8 @@ class Solution {
     func runningSum(_ nums: [Int]) -> [Int] {
         var result: [Int] = nums
 
-        for i in 0..<nums.count - 1 {
-            result[i + 1] = result[i] + nums[i + 1]
+        for i in 1..<nums.count {
+            result[i] += result[i - 1]
         }
 
         return result
