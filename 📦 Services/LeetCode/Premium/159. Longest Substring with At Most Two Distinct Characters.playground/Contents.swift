@@ -3,6 +3,8 @@ import UIKit
 // 159. Longest Substring with At Most Two Distinct Characters
 // https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/
 
+// Given a string s, return the longest substring that contains at most tho distinct characters
+
 class Solution {
     func lengthOfLongestSubstring(_ s: String) -> Int {
         var s = Array(s)
